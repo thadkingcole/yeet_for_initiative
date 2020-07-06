@@ -8,7 +8,7 @@ function rollDice(sides) {
 $(".dice").click(function () {
   const diceSides = $(this).data("num");
   const roll = rollDice(diceSides);
-  $("#rolls").prepend($("<h2>").text(`d${diceSides}: ${roll}`))
+  $("#rolls").prepend($("<h2>").text(`d${diceSides}: ${roll}`));
   console.log(roll);
 });
 
