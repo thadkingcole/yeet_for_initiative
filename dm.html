@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Map</title>
+    <title>DM Info</title>
     <!-- Bootstrap CSS CDN -->
     <link
       rel="stylesheet"
@@ -13,31 +13,60 @@
     />
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4">
-          <img
-            class="col-12 mountAimilios"
-            src="./images/maps/00_Slave_Harbor_Main.jpg"
-            alt="Mount Aimilios"
-          />
-        </div>
-        <div class="col-4">
-          <img
-            class="col-12"
-            src="https://placekitten.com/300/400"
-            alt="placekitten"
-          />
-        </div>
-        <h1 class="invisible mountAimilios">Mount Aimilios</h1>
-        <p class="invisible mountAimilios">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          error quod, vel obcaecati accusamus iste tempora sapiente veritatis
-          deleniti eaque cumque minus, eius vitae explicabo eum nobis,
-          temporibus deserunt libero?
-        </p>
-      </div>
-    </div>
+    <h1>Dice Roller</h1>
+    <p>
+      Click a dice to roll it. Click another dice to roll another. Roll results,
+      and their total will be displayed
+    </p>
+    <img
+      id="d4"
+      class="dice"
+      src="images/dice/d4.jpg"
+      alt="d4"
+      width="15%"
+      data-num="4"
+    />
+    <img
+      id="d6"
+      class="dice"
+      src="images/dice/d6.png"
+      alt="d6"
+      width="15%"
+      data-num="6"
+    />
+    <img
+      id="d8"
+      class="dice"
+      src="images/dice/d8.jpg"
+      alt="d8"
+      width="15%"
+      data-num="8"
+    />
+    <img
+      id="d10"
+      class="dice"
+      src="images/dice/d10.jpg"
+      alt="d10"
+      width="15%"
+      data-num="10"
+    />
+    <img
+      id="d12"
+      class="dice"
+      src="images/dice/d12.png"
+      alt="d12"
+      width="15%"
+      data-num="12"
+    />
+    <img
+      id="d20"
+      class="dice"
+      src="images/dice/d20.png"
+      alt="d20"
+      width="15%"
+      data-num="20"
+    />
+    <div id="rolls"></div>
     <!-- JS, Popper.js, and jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -54,7 +83,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <!-- My JS -->
-    <script src="js/map.js"></script>
+    <!-- dm.js -->
+    <script src="js/dm.js"></script>
   </body>
 </html>
