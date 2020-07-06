@@ -12,60 +12,78 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <h1>Dice Roller</h1>
-    <p>
-      Click a dice to roll it. The results will be displayed below.
-    </p>
-    <img
-      id="d4"
-      class="dice"
-      src="images/dice/d4.jpg"
-      alt="d4"
-      width="15%"
-      data-num="4"
-    />
-    <img
-      id="d6"
-      class="dice"
-      src="images/dice/d6.png"
-      alt="d6"
-      width="15%"
-      data-num="6"
-    />
-    <img
-      id="d8"
-      class="dice"
-      src="images/dice/d8.jpg"
-      alt="d8"
-      width="15%"
-      data-num="8"
-    />
-    <img
-      id="d10"
-      class="dice"
-      src="images/dice/d10.jpg"
-      alt="d10"
-      width="15%"
-      data-num="10"
-    />
-    <img
-      id="d12"
-      class="dice"
-      src="images/dice/d12.png"
-      alt="d12"
-      width="15%"
-      data-num="12"
-    />
-    <img
-      id="d20"
-      class="dice"
-      src="images/dice/d20.png"
-      alt="d20"
-      width="15%"
-      data-num="20"
-    />
-    <div id="rolls"></div>
+  <body class="container">
+    <header class="row">
+      <div class="col">
+        <h1>Dice Roller</h1>
+        <p>
+          Click a dice to roll it. The results will be displayed below.
+        </p>
+      </div>
+    </header>
+    <main class="row">
+      <figure class="figure col-2">
+        <figcaption class="display-4 text-center">D4</figcaption>
+        <img
+          id="d4"
+          class="dice figure-img img-fluid rounded"
+          src="images/dice/d4.jpg"
+          alt="d4"
+          data-num="4"
+        />
+      </figure>
+      <figure class="figure col-2">
+        <figcaption class="display-4 text-center">D6</figcaption>
+        <img
+          id="d6"
+          class="dice figure-img img-fluid rounded"
+          src="images/dice/d6.png"
+          alt="d6"
+          data-num="6"
+        />
+      </figure>
+      <figure class="figure col-2">
+        <figcaption class="display-4 text-center">D8</figcaption>
+        <img
+          id="d8"
+          class="dice figure-img img-fluid rounded"
+          src="images/dice/d8.jpg"
+          alt="d8"
+          data-num="8"
+        />
+      </figure>
+      <figure class="figure col-2">
+        <figcaption class="display-4 text-center">D10</figcaption>
+        <img
+          id="d10"
+          class="dice figure-img img-fluid rounded"
+          src="images/dice/d10.jpg"
+          alt="d10"
+          data-num="10"
+        />
+      </figure>
+      <figure class="figure col-2">
+        <figcaption class="display-4 text-center">D12</figcaption>
+        <img
+          id="d12"
+          class="dice figure-img img-fluid rounded"
+          src="images/dice/d12.png"
+          alt="d12"
+          data-num="12"
+        />
+      </figure>
+      <figure class="figure col-2">
+        <figcaption class="display-4 text-center">D20</figcaption>
+        <img
+          id="d20"
+          class="dice figure-img img-fluid rounded"
+          src="images/dice/d20.png"
+          alt="d20"
+          data-num="20"
+        />
+      </figure>
+      <div class="col" id="rolls"></div>
+    </main>
     <!-- JS, Popper.js, and jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

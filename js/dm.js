@@ -14,25 +14,25 @@ $(".dice").click(function () {
 
 // tests
 // roll one million times and show results on console
-// function testDice(sides) {
-//   // create array to hold results
-//   const results = new Array();
-//   for (let i = 1; i <= sides; i++) {
-//     // initialize all results to 0
-//     // results[0] will be the bad result counter
-//     results[i] = 0;
-//   }
-//   for (let i = 0; i < 1000000; i++) {
-//     // roll the dice
-//     let roll = rollDice(sides);
-//     // if the roll is valid
-//     if (roll >= 1 && roll <= sides) {
-//       // incriment the respective esult
-//       results[roll]++;
-//     } else {
-//       // increment bad result counter
-//       results[0]++;
-//     }
-//   }
-//   console.log(results);
-// }
+function testDice(sides) {
+  // create array to hold results
+  const results = new Array();
+  for (let i = 1; i <= sides; i++) {
+    // initialize all results to 0
+    // results[0] will be the bad result counter
+    results[i] = 0;
+  }
+  for (let i = 0; i < 1000000; i++) {
+    // roll the dice
+    let roll = rollDice(sides);
+    // if the roll is valid
+    if (roll >= 1 && roll <= sides) {
+      // incriment the respective esult
+      results[roll]++;
+    } else {
+      // increment bad result counter
+      results[0]++;
+    }
+  }
+  console.log(results);
+}
