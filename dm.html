@@ -11,19 +11,50 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body class="container">
     <header class="row">
       <div class="col">
         <h1>Dice Roller</h1>
         <p>
-          Click a dice to roll it. The results will be displayed below.
+          Click a dice to roll it. The results will be displayed in a table
+          below.
         </p>
       </div>
+      <!-- modifier -->
+      <aside class="align-self-end mb-3">
+        <figcaption id="zero" class="figure-caption text-center">Modifier</figcaption>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-danger" type="button" id="minus1">
+              -1
+            </button>
+          </div>
+          <input
+            type="text"
+            id="modifier"
+            class="form-control text-center"
+            value="0"
+            size="4"
+            autofocus
+          />
+          <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button" id="add1">
+              +1
+            </button>
+          </div>
+        </div>
+      </aside>
     </header>
-    <main class="row">
-      <figure class="figure col-2">
-        <figcaption class="display-4 text-center">D4</figcaption>
+    <!-- dice pictures -->
+    <section class="row">
+      <figure class="figure col">
+        <figcaption class="figure-caption text-center">D4</figcaption>
         <img
           id="d4"
           class="dice figure-img img-fluid rounded"
@@ -32,8 +63,8 @@
           data-num="4"
         />
       </figure>
-      <figure class="figure col-2">
-        <figcaption class="display-4 text-center">D6</figcaption>
+      <figure class="figure col">
+        <figcaption class="figure-caption text-center">D6</figcaption>
         <img
           id="d6"
           class="dice figure-img img-fluid rounded"
@@ -42,8 +73,8 @@
           data-num="6"
         />
       </figure>
-      <figure class="figure col-2">
-        <figcaption class="display-4 text-center">D8</figcaption>
+      <figure class="figure col">
+        <figcaption class="figure-caption text-center">D8</figcaption>
         <img
           id="d8"
           class="dice figure-img img-fluid rounded"
@@ -52,8 +83,8 @@
           data-num="8"
         />
       </figure>
-      <figure class="figure col-2">
-        <figcaption class="display-4 text-center">D10</figcaption>
+      <figure class="figure col">
+        <figcaption class="figure-caption text-center">D10</figcaption>
         <img
           id="d10"
           class="dice figure-img img-fluid rounded"
@@ -62,8 +93,8 @@
           data-num="10"
         />
       </figure>
-      <figure class="figure col-2">
-        <figcaption class="display-4 text-center">D12</figcaption>
+      <figure class="figure col">
+        <figcaption class="figure-caption text-center">D12</figcaption>
         <img
           id="d12"
           class="dice figure-img img-fluid rounded"
@@ -72,8 +103,8 @@
           data-num="12"
         />
       </figure>
-      <figure class="figure col-2">
-        <figcaption class="display-4 text-center">D20</figcaption>
+      <figure class="figure col">
+        <figcaption class="figure-caption text-center">D20</figcaption>
         <img
           id="d20"
           class="dice figure-img img-fluid rounded"
@@ -82,8 +113,35 @@
           data-num="20"
         />
       </figure>
-      <div class="col" id="rolls"></div>
-    </main>
+    </section>
+    <!-- roll results -->
+    <section class="row">
+      <table
+        class="col table table-borderless table-responsive text-center invisible"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Dice</th>
+            <th scope="col">Result</th>
+          </tr>
+        </thead>
+        <tbody id="rolls">
+          <!-- rolls go here -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">Total</th>
+            <td id="total">
+              <!-- cumulative total of all rolls goes here -->
+            </td>
+            <td>
+              <!-- clears all rows, zeros total, and hides table -->
+              <button id="clear-all" class="btn btn-danger">clear</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
     <!-- JS, Popper.js, and jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
