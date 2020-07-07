@@ -59,7 +59,7 @@ $(".dice").click(function () {
 // clear roll event
 $("#rolls").on("click", ".remove-roll", function () {
   // subtract the roll being removed from total
-  total -= parseInt($(this).prev().text());
+  total -= parseInt($(this).prev().text(), 10);
   // remove corresponding row clicked by user
   $(this).parent().remove();
   // display new total on table
