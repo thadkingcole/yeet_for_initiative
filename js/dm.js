@@ -33,11 +33,14 @@ $("#zero").click(function () {
 // click event for each dice
 $(".dice").click(function () {
   const diceSides = $(this).data("num"), // number of sides to be rolled
-    roll = rollDice(diceSides) + modifier, // result of roll including modifier
+    roll = rollDice(diceSides), // result of roll
+    rollTotal = roll + modifier;
     newRow = $("<tr>"); // create new table to display roll results
   // populate new row with d{#sides}, roll result, and clear button
   newRow.append($("<td>").text(`d${diceSides}`));
   newRow.append($("<td>").text(roll));
+  newRow.append($("<td>").text(modifier));
+  newRow.append($("<td>").text(rollTotal));
   newRow.append(
     $("<td>")
       .addClass("remove-roll")
@@ -50,7 +53,7 @@ $(".dice").click(function () {
   // prepend the new row to the table
   $("#rolls").prepend(newRow);
   // update total for table
-  total += roll;
+  total += rollTotal;
   $("#total").text(total);
   // remove invisible class so that table can be seen
   $("table").removeClass("invisible");
