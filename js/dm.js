@@ -34,7 +34,7 @@ $("#zero").click(function () {
 $(".dice").click(function () {
   const diceSides = $(this).data("num"), // number of sides to be rolled
     roll = rollDice(diceSides), // result of roll
-    rollTotal = roll + modifier;
+    rollTotal = roll + modifier, // add modifier
     newRow = $("<tr>"); // create new table to display roll results
   // populate new row with d{#sides}, roll result, and clear button
   newRow.append($("<td>").text(`d${diceSides}`));
